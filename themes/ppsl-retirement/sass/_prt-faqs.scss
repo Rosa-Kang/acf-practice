@@ -1,0 +1,85 @@
+/*--------------------------------------------------------------
+# FAQs - Accordions
+--------------------------------------------------------------*/
+
+.accordion-container {
+  @include bp(tablet) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.accordions {
+  list-style: none;
+  margin: 0;
+}
+
+.accordion-header {
+  &:hover,
+  &:active {
+    cursor: pointer;
+  }
+}
+
+.accordion-body {
+  width: auto;
+  display: none;
+  white-space: normal;
+}
+
+.accordion-control {
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  text-shadow: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  line-height: inherit;
+  text-align: left;
+  width: 100%;
+  @include flex(row, space-between, center);
+  padding: 0;
+
+  &:hover {
+    border: none;
+    box-shadow: none;
+    opacity: $dim;
+  }
+}
+
+.accordion-icon-wrapper {
+  text-align: right;
+  transform-origin: center center;
+  transition: transform ease-out 0.3s;
+  height: 100%;
+  width: auto;
+  line-height: 0;
+
+  &:focus {
+    outline: 0;
+  }
+
+  svg:last-child {
+    display: none;
+  }
+}
+
+// Cards - Suites
+.cards-suites {
+  .accordion-control {
+    width: unset;
+
+    &:hover {
+      border: $border--light;
+    }
+  }
+
+  .current-accordion-item .accordion-control {
+    display: none;
+
+    @include bp(tablet) {
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+/*--------------------------------------------------------------
+# Hero
+--------------------------------------------------------------*/
+
+// Hero text image (top hero) ------------------------------
+.hero-text-image {
+  height: calc(88vh - 98px);
+
+  @include bp(mobile-667) {
+    height: 100vw;
+  }
+
+  @include bp(tablet) {
+    height: 45vw;
+  }
+
+  @include bp(desktop-1024) {
+    align-items: center;
+  }
+
+  .hero-body {
+    @include flex(column, flex-end, center);
+    padding: 0;
+  }
+
+  .hero-content-container {
+    width: 100%;
+
+    @include bp(tablet) {
+      padding: $space-unit--lg;
+    }
+
+    .columns {
+      flex-direction: column-reverse;
+
+      @include bp(tablet) {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .column {
+        flex-grow: 0;
+      }
+    }
+  }
+
+  .hero-content {
+    background: $color__primary-tint;
+
+    @include bp($mobile__menu-bp) {
+      padding: $space-unit--lg $base__space-unit !important;
+    }
+  }
+}
+
+// Hero Fullwidth --------------------------
+.hero-fullwidth {
+  height: 0;
+  padding-bottom: 100%;
+
+  @include bp(tablet) {
+    padding-bottom: 45%;
+  }
+}

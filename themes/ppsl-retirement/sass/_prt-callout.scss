@@ -1,0 +1,229 @@
+/*--------------------------------------------------------------
+# Callout
+--------------------------------------------------------------*/
+
+.callout {
+  padding-top: $base__space-unit + $base__space-unit;
+
+  @include bp(tablet) {
+    padding-top: $space-unit--lg + $base__space-unit;
+  }
+
+  @include bp(desktop-1024) {
+    padding: $space-unit--lg + $base__space-unit 0;
+  }
+
+  @include bp($mobile__menu-bp) {
+    padding: $space-unit--lg + $base__space-unit 0 $space-unit--s * 8 +
+      $base__space-unit;
+  }
+
+  .callout-wrapper {
+    @include bp(desktop-1024) {
+      padding: 0 $space-unit--lg;
+    }
+
+    @include bp($mobile__bp) {
+      padding: 0 $space-unit--xxxl;
+    }
+  }
+
+  .columns {
+    margin-top: $space-unit--xxxl;
+
+    @include bp(desktop-1024) {
+      margin-top: 0;
+      background: none !important;
+    }
+
+    .column:first-child {
+      margin-top: -$space-unit--s * 5;
+
+      @include bp(tablet) {
+        margin-top: -$space-unit--s * 6;
+      }
+
+      @include bp(desktop-1024) {
+        margin-top: 0;
+      }
+
+      .content-wrapper {
+        @include bp(desktop-1024) {
+          padding: 0;
+        }
+      }
+    }
+
+    .column:last-child {
+      margin-top: -$base__space-unit;
+
+      @include bp(tablet) {
+        margin-top: -$space-unit--s * 4;
+      }
+
+      @include bp(desktop-1024) {
+        margin-top: 0;
+        background: $color__primary;
+      }
+
+      ul {
+        @include bp(desktop-1024) {
+          margin-top: 0;
+          // margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .callout-image-wrapper {
+    height: 0;
+    padding-bottom: 100%;
+
+    @include bp(tablet) {
+      padding-bottom: 66%;
+    }
+
+    @include bp(desktop-1024) {
+      padding-bottom: 133%;
+      width: 110%;
+    }
+
+    @include bp(bulma-fullhd) {
+      padding-bottom: 110%;
+      width: 110%;
+    }
+  }
+}
+
+.page-template-page-services {
+  .callout {
+    @include bp(desktop-1024) {
+      padding-bottom: $space-unit--xxxl;
+    }
+
+    .callout-wrapper > .container-sm.content-wrapper {
+      @include bp(tablet) {
+        padding: 0;
+      }
+    }
+  }
+}
+
+.page-template-page-suites {
+  .callout {
+    @include bp($mobile__menu-bp) {
+      padding: 0;
+      padding-top: $space-unit--xxl;
+    }
+  }
+}
+
+.page-template-page-services-2 {
+  .callout {
+    padding-top: 0;
+  }
+}
+
+// Callout Image Center ---------------
+.callout-img-center {
+  .callout-image-wrapper {
+    height: 0;
+    padding-bottom: 100%;
+
+    @include bp(tablet) {
+      padding-bottom: 66%;
+      box-shadow: $box-shadow--2;
+    }
+
+    @include bp(desktop-1024) {
+      padding-bottom: 54%;
+    }
+  }
+
+  .column:first-child {
+    margin-top: -$space-unit--s * 5;
+
+    .content-wrapper {
+      @include bp(tablet) {
+        padding-top: 0;
+      }
+    }
+  }
+
+  .callout-content-wrapper {
+    padding: 0 0 $base__space-unit 0;
+
+    @include bp(tablet) {
+      padding: 0 $space-unit--lg $space-unit--lg $space-unit--lg;
+      max-width: $container-width--sm;
+      margin: 0 auto;
+    }
+  }
+}
+
+// Callout Image Left / Right
+.callout-img-left,
+.callout-img-right {
+  .callout-image-wrapper {
+    height: 0;
+    padding-bottom: 76%;
+
+    @include bp(tablet) {
+      padding-bottom: 66%;
+    }
+
+    @include bp(desktop-1024) {
+      padding-bottom: 0;
+      height: 100%;
+    }
+  }
+}
+
+.callout-img-right {
+  .columns {
+    @include bp(desktop-1024) {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+// Callout Video ---------------------
+.callout-video {
+  padding-bottom: $base__space-unit;
+
+  @include bp(desktop-1024) {
+    padding-top: $base__space-unit;
+  }
+
+  .column:first-child {
+    .content-wrapper {
+      padding: 0;
+
+      @include bp(desktop-1024) {
+        padding-left: $space-unit--lg;
+      }
+    }
+  }
+
+  .video-wrapper {
+    margin-bottom: $base__space-unit;
+
+    @include bp(desktop-1024) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; // 16:9
+  height: 0;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

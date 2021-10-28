@@ -1,0 +1,463 @@
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+
+// Watermarks ------------------------
+.home {
+  .intro {
+    background: url('../../assets/backgrounds/park-place-seniors-living-bg-leaves-6-1br-top-left.svg'),
+      url('../../assets/backgrounds/park-place-seniors-living-bg-leaves-8-2br-bottom-right.svg');
+    background-repeat: no-repeat;
+    background-size: 120px, 200px;
+    z-index: 3;
+    background-position: top -0.5rem left -1rem, bottom 0.75rem right -5.85rem;
+
+    @include bp($mobile__menu-bp) {
+      background: url('../../assets/backgrounds/park-place-seniors-living-bg-sm-leaves-8-2br-top-left.svg'),
+        url('../../assets/backgrounds/park-place-seniors-living-bg-sm-leaves-6-1br-bottom-right.svg');
+      background-repeat: no-repeat;
+      background-size: 370px, 200px;
+      background-position: top -10rem left -3rem, bottom 4rem right -0.25rem;
+    }
+  }
+
+  .features {
+    background: url('../../assets/backgrounds/park-place-seniors-living-bg-leaves-combo-top-left-1.svg'),
+      url('../../assets/backgrounds/park-place-seniors-living-bg-lg-leaf-bottom-right-1.svg');
+    background-repeat: no-repeat;
+    background-size: 200px, 450px;
+    z-index: 3;
+    background-position: top 0 left 0, bottom 0rem right -3.75rem;
+
+    @include bp($mobile__menu-bp) {
+      background: url('../../assets/backgrounds/park-place-seniors-living-bg-leaves-combo-top-left.svg'),
+        url('../../assets/backgrounds/park-place-seniors-living-bg-lg-leaf-bottom-right.svg');
+      background-repeat: no-repeat;
+      background-size: 336px, 450px;
+      background-position: top 0 left -0.5rem, bottom -1.5rem right -3.85rem;
+    }
+  }
+}
+
+.page-template-page-tour {
+  .additional-form {
+    background: url('../../assets/backgrounds/park-place-seniors-living-bg-leaves-6-1br-top-left.svg'),
+      url('../../assets/backgrounds/park-place-seniors-living-bg-lg-leaf-bottom-right-2.svg'),
+      url('../../assets/backgrounds/park-place-seniors-living-bg-lg-leaf-bottom-right-1.svg');
+    background-repeat: no-repeat;
+    background-size: 120px, 250px, 325px;
+    z-index: 3;
+    background-position: top -0.5rem left -1rem, top 15rem right -3.25rem,
+      bottom -3.75rem right -1.5rem;
+
+    @include bp($mobile__menu-bp) {
+      background: url('../../assets/backgrounds/park-place-seniors-living-bg-sm-leaves-8-2br-top-left.svg'),
+        url('../../assets/backgrounds/park-place-seniors-living-bg-lg-leaf-bottom-right-1.1.svg');
+      background-repeat: no-repeat;
+      background-size: 370px, 650px;
+      background-position: top -10rem left -3rem, bottom -4rem right -5rem;
+    }
+  }
+}
+
+.page-template-page-contact {
+  .contact-form {
+    background: url('../../assets/backgrounds/park-place-seniors-living-bg-leaves-6-1br-top-left.svg'),
+      url('../../assets/backgrounds/park-place-seniors-living-bg-lg-leaf-bottom-right-2.svg'),
+      url('../../assets/backgrounds/park-place-seniors-living-bg-lg-leaf-bottom-right-2.1.svg');
+    background-repeat: no-repeat;
+    background-size: 120px, 250px, 270px;
+    z-index: 3;
+    background-position: top -0.5rem left -1rem, top 21% right -3.25rem,
+      top 62% right -7.5rem;
+
+    @include bp(tablet) {
+      background-position: top -0.5rem left -1rem, top 11% right -3.25rem,
+        bottom 0.5rem right -7.5rem;
+    }
+
+    @include bp($mobile__menu-bp) {
+      background: url('../../assets/backgrounds/park-place-seniors-living-bg-sm-leaves-8-2br-top-left.svg'),
+        url('../../assets/backgrounds/park-place-seniors-living-bg-lg-leaf-bottom-right-1.1.svg');
+      background-repeat: no-repeat;
+      background-size: 370px, 650px;
+      background-position: top -10rem left -3rem, bottom -4rem right -5rem;
+    }
+  }
+}
+
+.page-template-page-lifestyle {
+  .intro {
+    background: url('../../assets/backgrounds/park-place-seniors-living-bg-leaves-6-1br-top-left.svg'),
+      url('../../assets/backgrounds/park-place-seniors-living-bg-lg-leaf-bottom-right-1.svg');
+    background-repeat: no-repeat;
+    background-size: 120px, 325px;
+    z-index: 3;
+    background-position: top -0.5rem left -1rem, bottom -3.75rem right -1.5rem;
+
+    @include bp($mobile__menu-bp) {
+      background: url('../../assets/backgrounds/park-place-seniors-living-bg-sm-leaves-8-2br-top-left.svg'),
+        url('../../assets/backgrounds/park-place-seniors-living-bg-lg-leaf-bottom-right-1.svg');
+      background-repeat: no-repeat;
+      background-size: 370px, 650px;
+      background-position: top -10rem left -3rem, bottom -5rem right -4rem;
+    }
+  }
+
+  .callout {
+    background: url('../../assets/backgrounds/park-place-seniors-living-bg-leaves-6-1br-top-left-1.1.svg');
+    background-repeat: no-repeat;
+    background-size: 200px;
+    z-index: 3;
+    background-position: top -1rem left -2rem;
+
+    @include bp($mobile__menu-bp) {
+      background: url('../../assets/backgrounds/park-place-seniors-living-bg-lg-leaves-8-2br-top-left-1.1.svg'),
+        url('../../assets/backgrounds/park-place-seniors-living-bg-leaves-6-1br-bottom-left.svg'),
+        url('../../assets/backgrounds/park-place-seniors-living-bg-lg-leaf-bottom-right-2.svg');
+      background-repeat: no-repeat;
+      background-size: 420px, 350px, 450px;
+      background-position: top -16.5rem left -9.25rem,
+        bottom 0.5rem left -5.5rem, bottom -8rem right -4rem;
+    }
+  }
+}
+
+.page-template-page-services-2 {
+  .intro {
+    background: url('../../assets/backgrounds/park-place-seniors-living-bg-leaves-6-1br-top-left.svg'),
+      url('../../assets/backgrounds/park-place-seniors-living-bg-lg-leaf-bottom-right-1.svg');
+    background-repeat: no-repeat;
+    background-size: 120px, 325px;
+    z-index: 3;
+    background-position: top -0.5rem left -1rem, bottom -1rem right -1.5rem;
+
+    @include bp($mobile__menu-bp) {
+      background: url('../../assets/backgrounds/park-place-seniors-living-bg-sm-leaves-8-2br-top-left.svg'),
+        url('../../assets/backgrounds/park-place-seniors-living-bg-lg-leaf-bottom-right-1.svg');
+      background-repeat: no-repeat;
+      background-size: 370px, 650px;
+      background-position: top -10rem left -3rem, bottom 0 right -18rem;
+    }
+  }
+
+  .callout {
+    @include bp($mobile__menu-bp) {
+      background: url('../../assets/backgrounds/park-place-seniors-living-bg-leaves-6-1br-bottom-left.svg'),
+        url('../../assets/backgrounds/park-place-seniors-living-bg-lg-leaf-bottom-right-2.svg');
+      background-repeat: no-repeat;
+      background-size: 350px, 450px;
+      background-position: bottom 0.5rem left -5.5rem, bottom -8rem right -4rem;
+    }
+  }
+}
+
+.page-template-page-faq,
+.page-template-page-careers {
+  .background-wrapper {
+    background: url('../../assets/backgrounds/park-place-seniors-living-bg-leaves-6-1br-top-left.svg'),
+      url('../../assets/backgrounds/park-place-seniors-living-bg-lg-leaf-bottom-right-1.svg');
+    background-repeat: no-repeat;
+    background-size: 120px, 325px;
+    z-index: 3;
+    background-position: top -0.5rem left -1rem, bottom -3.25rem right -2.5rem;
+
+    @include bp($mobile__menu-bp) {
+      background: url('../../assets/backgrounds/park-place-seniors-living-bg-lg-leaves-8-2br-top-left.svg'),
+        url('../../assets/backgrounds/park-place-seniors-living-bg-lg-leaf-bottom-right-2.svg');
+      background-repeat: no-repeat;
+      background-size: 420px, 450px;
+      background-position: top -6.5rem left -7.75rem,
+        bottom -3rem right -0.75rem;
+    }
+  }
+}
+
+.page-template-page-about {
+  .intro {
+    background: url('../../assets/backgrounds/park-place-seniors-living-bg-leaves-6-1br-top-left.svg'),
+      url('../../assets/backgrounds/park-place-seniors-living-bg-lg-leaf-bottom-right-2.svg');
+    background-repeat: no-repeat;
+    background-size: 120px, 250px;
+    z-index: 3;
+    background-position: top -0.5rem left -1rem, bottom -4.5rem right -3.25rem;
+
+    @include bp($mobile__menu-bp) {
+      background: url('../../assets/backgrounds/park-place-seniors-living-bg-sm-leaves-8-2br-top-left.svg'),
+        url('../../assets/backgrounds/park-place-seniors-living-bg-lg-leaf-bottom-right.svg');
+      background-repeat: no-repeat;
+      background-size: 370px, 450px;
+      background-position: top -10rem left -3rem, bottom -3rem right -3rem;
+    }
+  }
+}
+
+.page-template-page-lifestyle-2,
+.page-template-page-services {
+  .intro {
+    background: url('../../assets/backgrounds/park-place-seniors-living-bg-leaves-6-1br-top-left.svg'),
+      url('../../assets/backgrounds/park-place-seniors-living-bg-lg-leaf-bottom-right-2.svg');
+    background-repeat: no-repeat;
+    background-size: 120px, 250px;
+    z-index: 3;
+    background-position: top -0.5rem left -1rem, bottom 1.5rem right -3.25rem;
+
+    @include bp($mobile__menu-bp) {
+      background: url('../../assets/backgrounds/park-place-seniors-living-bg-sm-leaves-8-2br-top-left.svg'),
+        url('../../assets/backgrounds/park-place-seniors-living-bg-lg-leaf-bottom-right-1.svg');
+      background-repeat: no-repeat;
+      background-size: 370px, 650px;
+      background-position: top -10rem left -3rem, bottom 3rem right -7rem;
+    }
+  }
+
+  .callout {
+    background: url('../../assets/backgrounds/park-place-seniors-living-bg-leaves-6-1br-top-left-1.svg');
+    background-repeat: no-repeat;
+    background-size: 115px;
+    z-index: 3;
+    background-position: top -2.5rem left -1.5rem;
+
+    @include bp($mobile__menu-bp) {
+      background: url('../../assets/backgrounds/park-place-seniors-living-bg-leaves-combo-top-left.svg'),
+        url('../../assets/backgrounds/park-place-seniors-living-bg-lg-leaf-bottom-right-2.svg');
+      background-repeat: no-repeat;
+      background-size: 336px, 450px;
+      background-position: top -1.75rem left -0.5rem, bottom -9.5rem right -4rem;
+    }
+  }
+}
+
+.page-template-page-suites {
+  .intro {
+    background: url('../../assets/backgrounds/park-place-seniors-living-bg-leaves-6-1br-top-left.svg'),
+      url('../../assets/backgrounds/park-place-seniors-living-bg-lg-leaf-bottom-right-2.svg');
+    background-repeat: no-repeat;
+    background-size: 120px, 250px;
+    z-index: 3;
+    background-position: top -0.5rem left -1rem, bottom 4.25rem right -3.25rem;
+
+    @include bp($mobile__menu-bp) {
+      background: url('../../assets/backgrounds/park-place-seniors-living-bg-sm-leaves-8-2br-top-left.svg'),
+        url('../../assets/backgrounds/park-place-seniors-living-bg-lg-leaf-bottom-right-1.svg');
+      background-repeat: no-repeat;
+      background-size: 370px, 650px;
+      background-position: top -10rem left -3rem, bottom 0 right -7rem;
+    }
+  }
+
+  .callout {
+    background: url('../../assets/backgrounds/park-place-seniors-living-bg-lg-leaf-top-left-1.svg'),
+      url('../../assets/backgrounds/park-place-seniors-living-bg-lg-leaf-bottom-right-1.svg');
+    background-repeat: no-repeat;
+    background-size: 325px, 450px;
+    z-index: 3;
+    background-position: top 0 left 0, bottom 0 right -7rem;
+
+    @include bp($mobile__menu-bp) {
+      background: url('../../assets/backgrounds/park-place-seniors-living-bg-leaves-combo-top-left.svg'),
+        url('../../assets/backgrounds/park-place-seniors-living-bg-lg-leaf-bottom-right.svg');
+      background-repeat: no-repeat;
+      background-size: 336px, 450px;
+      background-position: top 0 left -0.5rem, bottom -1.5rem right -6rem;
+    }
+  }
+}
+
+.blog {
+  .blog-container {
+    background: url('../../assets/backgrounds/park-place-seniors-living-bg-leaves-6-1br-top-left.svg');
+    background-repeat: no-repeat;
+    background-size: 120px;
+    z-index: 3;
+    background-position: top -0.5rem left -1rem;
+
+    @include bp($mobile__menu-bp) {
+      background: url('../../assets/backgrounds/park-place-seniors-living-bg-sm-leaves-8-2br-top-left.svg'),
+        url('../../assets/backgrounds/park-place-seniors-living-bg-lg-leaf-bottom-right-1.svg');
+      background-repeat: no-repeat;
+      background-size: 370px, 650px;
+      background-position: top -10rem left -3rem, bottom 0 right -7rem;
+    }
+  }
+}
+
+.single {
+  article {
+    background: url('../../assets/backgrounds/park-place-seniors-living-bg-leaves-6-1br-top-left.svg');
+    background-repeat: no-repeat;
+    background-size: 120px;
+    z-index: 3;
+    background-position: top -0.5rem left -1rem;
+
+    @include bp($mobile__menu-bp) {
+      background: url('../../assets/backgrounds/park-place-seniors-living-bg-sm-leaves-8-2br-top-left.svg'),
+        url('../../assets/backgrounds/park-place-seniors-living-bg-lg-leaf-bottom-right-1.1.svg');
+      background-repeat: no-repeat;
+      background-size: 370px, 650px;
+      background-position: top -10rem left -3rem, bottom -4.5rem right -7rem;
+    }
+  }
+}
+
+// Backgrounds (use Bulma has-background-color) --------------------
+.bg-light-bis {
+  background: $color__light-bis;
+}
+
+.bg-success-dark {
+  background: $color__success-dark;
+}
+
+// Containers ------------------
+.container-sm {
+  margin: 0 auto;
+  max-width: $container-width--sm;
+}
+
+.container-m {
+  margin: 0 auto;
+  max-width: $container-width--m;
+}
+
+.content-wrapper {
+  padding: $base__space-unit;
+}
+
+.content-wrapper {
+  @include bp(tablet) {
+    padding: $space-unit--lg;
+  }
+
+  @include bp(desktop-1920) {
+    padding: $space-unit--xxl;
+  }
+}
+
+.fixed-header {
+  margin-top: $mobile__menu-height;
+
+  @include bp($mobile__menu-bp) {
+    margin-top: $desktop__menu-height;
+  }
+}
+
+// Helpers -----------------------
+.mobile-wrapper {
+  @include bp($mobile__menu-bp) {
+    display: none;
+  }
+}
+
+.desktop-wrapper {
+  display: none;
+
+  @include bp($mobile__menu-bp) {
+    display: block;
+  }
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.m-auto {
+  margin: 0 auto;
+}
+
+ul.list-style-none {
+  list-style: none !important;
+  margin: 0 !important;
+}
+
+.anchor {
+  display: block;
+  position: relative;
+  top: -$mobile__menu-height;
+  visibility: hidden;
+
+  @include bp($mobile__menu-bp) {
+    top: -$desktop__menu-height;
+  }
+}
+
+.callout-pl {
+  @include bp(desktop-1024) {
+    padding-left: $space-unit--lg;
+  }
+}
+
+.cards-suites {
+  .callout-pl {
+    padding-left: $base__space-unit;
+
+    @include bp(desktop-1024) {
+      padding-left: $space-unit--lg;
+    }
+  }
+}
+
+.callout-pr {
+  @include bp(desktop-1024) {
+    padding-right: $space-unit--lg;
+  }
+}
+
+// Separator
+.hl {
+  border-bottom: $border__primary;
+  border-width: 1px;
+  width: 105px;
+}
+
+.has-background-primary {
+  .hl {
+    border-color: $color__light;
+  }
+}
+
+.has-background-light {
+  .hl {
+    border-color: $color__primary;
+  }
+}
+
+.callout-img-center,
+.cards-team-members,
+.cards-suites {
+  .separator {
+    margin-top: $space-unit--xxs !important;
+  }
+
+  .hl {
+    margin: 0 auto;
+  }
+}
+
+.popout-menu {
+  .separator {
+    margin-top: $space-unit--xs !important;
+  }
+}
+
+/* Source: https://a11y-101.com/development/skip-link */
+.visually-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.visually-hidden:focus {
+  clip: auto;
+  height: auto;
+  overflow: auto;
+  position: absolute;
+  width: auto;
+}

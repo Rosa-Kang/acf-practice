@@ -1,0 +1,212 @@
+/*--------------------------------------------------------------
+# Buttons
+--------------------------------------------------------------*/
+
+.button,
+.contact-form div.wpforms-container-full .wpforms-form button[type='submit'],
+.additional-form div.wpforms-container-full .wpforms-form button[type='submit'],
+.wp-block-button__link,
+.text-btn,
+.text-btn:active,
+.text-btn:focus,
+.text-btn:visited {
+  font-size: 20px;
+  line-height: 27px;
+  font-weight: $font__weight-semibold;
+  font-family: $font__main;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 0;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+.button,
+.contact-form div.wpforms-container-full .wpforms-form button[type='submit'],
+.additional-form
+  div.wpforms-container-full
+  .wpforms-form
+  button[type='submit'] {
+  min-width: 150px;
+  height: 53px;
+  padding: calc(0.5em - 1px) 1.75rem !important;
+}
+
+.wp-block-button__link {
+  width: 320.69px;
+  height: 54px;
+}
+
+.wp-block-button {
+  margin: 0 0 $base__space-unit 0 !important;
+
+  @include bp(mobile-667) {
+    margin: 0 $space-unit--s $base__space-unit 0 !important;
+  }
+}
+
+.wp-block-buttons {
+  flex-wrap: wrap;
+  @include row-cen();
+
+  @include bp(desktop-1024) {
+    justify-content: space-between;
+  }
+}
+
+.nav-cta-btn:after {
+  display: none;
+}
+
+.nav-cta-btn a {
+  cursor: pointer;
+  padding: calc(0.5em - 1px) 1em;
+  text-align: center;
+  white-space: nowrap;
+  @include row-cen();
+  color: $color__light !important;
+  width: 208px;
+  height: 53px;
+  background: $color__success;
+  font-family: $font__main;
+  font-weight: $font__weight-semibold;
+  font-size: 23px !important;
+  line-height: 32px;
+  text-transform: uppercase;
+  border: $border__success;
+
+  &:hover {
+    background: transparent;
+    color: $color__success !important;
+    border-color: $color__success;
+  }
+
+  @include bp($mobile__menu-bp) {
+    font-size: 18px !important;
+    line-height: 24px;
+    width: 160px;
+    height: 40px;
+  }
+}
+
+// Light
+.button.is-light,
+.button.is-light:active,
+.button.is-light:focus {
+  background: $color__light;
+  color: $color__primary !important;
+  border: $border__light;
+}
+
+.button.is-light:hover {
+  background: transparent;
+  color: $color__light !important;
+  border-color: $color__light;
+}
+
+// Primary
+.button.is-primary,
+.button.is-primary:active,
+.button.is-primary:focus {
+  background: $color__primary;
+  color: $color__light;
+  border: $border__primary;
+}
+
+.button.is-primary:hover {
+  background: transparent;
+  color: $color__primary;
+  border-color: $color__primary;
+}
+
+// Info
+.contact-form div.wpforms-container-full .wpforms-form button[type='submit'],
+.additional-form div.wpforms-container-full .wpforms-form button[type='submit'],
+.button.is-info,
+.button.is-info:active,
+.button.is-info:focus {
+  background: $color__info;
+  color: $color__light;
+  border: $border__info;
+}
+
+.contact-form
+  div.wpforms-container-full
+  .wpforms-form
+  button[type='submit']:hover,
+.additional-form
+  div.wpforms-container-full
+  .wpforms-form
+  button[type='submit']:hover,
+.button.is-info:hover {
+  background: transparent;
+  color: $color__info;
+  border-color: $color__info;
+}
+
+.wp-block-button__link:hover {
+  background: $color__warning-light !important;
+}
+
+.contact-form div.wpforms-container-full .wpforms-form button[type='submit'],
+.contact-form
+  div.wpforms-container-full
+  .wpforms-form
+  button[type='submit']:hover,
+.additional-form div.wpforms-container-full .wpforms-form button[type='submit'],
+.additional-form
+  div.wpforms-container-full
+  .wpforms-form
+  button[type='submit']:hover {
+  border-width: 2px;
+}
+
+// jobs
+.text-btn,
+.text-btn:visited,
+.text-btn:active,
+.text-btn:focus {
+  color: $color__info;
+
+  &:hover {
+    color: $color__success;
+  }
+}
+
+// Menu Btns -----------------------------
+.desktop-menu-btn {
+  a,
+  a:visited {
+    background: $color__success-dark;
+    color: $color__light !important;
+    width: 130px;
+    height: 33px;
+    @include col-cen();
+    border-radius: 3px;
+    box-shadow: $box-shadow--btn;
+  }
+
+  a:hover {
+    background: $color__success;
+  }
+}
+
+// Buttons Wrapper
+.buttons-wrapper {
+  @include flex(column, center, center);
+
+  @include bp(tablet) {
+    flex-direction: row;
+  }
+
+  div:last-child {
+    a {
+      margin-top: $base__space-unit;
+
+      @include bp(tablet) {
+        margin-top: 0;
+        margin-left: $space-unit--lg;
+      }
+    }
+  }
+}

@@ -1,0 +1,438 @@
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+.site-branding {
+  display: none;
+}
+
+.main-navigation {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: $color__light;
+  z-index: 999;
+  box-shadow: $box-shadow--1;
+}
+
+.main-navigation-container {
+  @include flex(row, space-between, center);
+  max-width: unset;
+
+  @include bp($mobile__bp) {
+    max-width: 1152px;
+  }
+
+  @include bp(bulma-fullhd) {
+    max-width: 1344px;
+  }
+}
+
+.main-logo-wrapper {
+  vertical-align: middle;
+  @include flex(row, unset, flex-start);
+
+  @include bp($mobile__menu-bp) {
+    vertical-align: unset;
+  }
+
+  &:hover {
+    opacity: $dim;
+  }
+
+  img {
+    object-fit: contain;
+    width: auto;
+    height: 80px;
+    vertical-align: middle;
+  }
+}
+
+.error-404 {
+  .main-logo-wrapper {
+    justify-content: center;
+  }
+}
+
+.mobile-menu-wrapper {
+  @include flex(row, space-between, center);
+  width: 100%;
+  height: $mobile__menu-height;
+
+  @include bp($mobile__menu-bp) {
+    height: $desktop__menu-height;
+    width: auto;
+    padding-top: $banner__menu-height;
+  }
+}
+
+.popout-menu-wrapper {
+  @include bp($mobile__menu-bp) {
+    display: none;
+  }
+}
+
+#toggle {
+  border: none;
+  background: none;
+  box-shadow: none;
+  text-shadow: none;
+  padding: 0;
+
+  @include flex(column, space-between, unset);
+  height: 24px;
+
+  .menu-icon {
+    width: 40px;
+    height: 1px;
+    border: 1px solid $color__primary;
+    border-radius: 3px;
+  }
+}
+
+#close-popout {
+  background: none;
+  border: none;
+  padding: 0;
+  width: 100%;
+  text-align: right;
+
+  &:hover {
+    svg {
+      stroke: $color__success;
+    }
+  }
+
+  svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+// Responsive Menu ---------------
+@media screen and (min-width: 1080px) {
+  // TODO: min-width must match $mobile__menu-bp
+  #toggle {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1079px) {
+  // TODO: max-width must be $mobile__menu-bp less 1px
+  #popout {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    overflow: auto;
+    @include flex(row, flex-end, center);
+    overflow-y: hidden;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    transition: transform ease-out 0.3s;
+  }
+}
+
+.dimmed {
+  background: $color__overlay;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+// Popout Menu -----------
+.popout-menu {
+  width: $mobile__menu-width;
+  height: 100%;
+  background: url('../../assets/backgrounds/park-place-seniors-living-bg-lg-leaf-tan.svg')
+      no-repeat left 0 bottom 0,
+    $color__light;
+  background-size: 255px 100px, cover;
+  @include flex(column, unset, flex-start);
+  color: $color__primary;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  .social-menu-wrapper {
+    @include flex(column, unset, flex-start);
+
+    @include bp($mobile__menu-bp) {
+      @include flex(row, space-between, center);
+      margin-top: $space-unit--s;
+    }
+  }
+
+  ul {
+    @include flex(column, unset, unset);
+
+    li {
+      width: 100%;
+      padding: $space-unit--s 0;
+    }
+  }
+
+  .menu-social-mobile-menu-container {
+    padding-top: $space-unit--xs;
+  }
+}
+
+// Mobile Menu Arrow Down Icon
+.mobile-menu-btn {
+  border: none;
+  background: transparent;
+  box-shadow: unset;
+  color: $color__light;
+  text-shadow: unset;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 28px;
+
+  &:hover {
+    border: none;
+    box-shadow: unset;
+  }
+
+  @include bp($mobile__menu-bp) {
+    display: none;
+  }
+}
+
+// Desktop ------------------------
+.desktop-menu-wrapper {
+  display: none;
+
+  @include bp($mobile__menu-bp) {
+    @include flex(column, center, flex-end);
+    width: 100%;
+    height: $desktop__menu-height;
+  }
+
+  .social-menu-wrapper {
+    @include flex(row, space-between, center);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $banner__menu-height;
+
+    ul {
+      display: block;
+    }
+  }
+
+  .social-menu-wrapper > div {
+    @include flex(row, space-between, center);
+    position: relative;
+    max-width: unset;
+
+    @include bp($mobile__bp) {
+      max-width: 1152px;
+    }
+  }
+
+  .contact-menu {
+    svg {
+      width: 18px;
+      height: 18px;
+      margin-right: 3px;
+    }
+  }
+
+  .secondary-menu {
+    @include flex(row, center, center);
+  }
+
+  .menu-main-menu-container {
+    li:last-child {
+      padding-right: 0;
+    }
+  }
+
+  .menu-main-menu-container > ul {
+    display: block;
+  }
+
+  li {
+    text-transform: lowercase;
+    padding: 0 $space-unit--s;
+    position: relative;
+
+    &:hover {
+      .sub-menu {
+        display: block;
+      }
+    }
+  }
+}
+
+// Desktop Social Menu
+#menu-social-menu {
+  padding: 0;
+
+  li {
+    border: none;
+    padding: $space-unit--xxs 0;
+
+    @include bp($mobile__menu-bp) {
+      padding: 0;
+      margin-left: 2rem;
+    }
+  }
+}
+
+// Desktop Menu
+#primary-menu {
+  padding-top: $banner__menu-height;
+  @include row-cen();
+
+  li {
+    position: relative;
+
+    &:hover:after {
+      position: absolute;
+      content: '';
+      height: 2px;
+      bottom: -6px;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      width: 13px;
+      background: $color__success;
+    }
+  }
+}
+
+// Font Changer
+.font-changer-wrapper {
+  margin-left: $space-unit--s * 2;
+
+  p {
+    font-weight: $font__weight-normal;
+
+    @include flex(row, center, baseline);
+
+    span {
+      padding-right: $space-unit--xxs/2;
+      cursor: pointer;
+      transition: $transition;
+    }
+  }
+
+  .js-font-increase {
+    font-size: 20px;
+  }
+
+  .js-font-normal {
+    font-size: 18px;
+  }
+
+  .js-font-decrease {
+    font-size: 15px;
+  }
+}
+
+// Menu item with children ----------------
+li.menu-item-has-children {
+  position: relative;
+  @include flex(row, flex-start, center);
+  flex-wrap: wrap;
+
+  @include bp($mobile__menu-bp) {
+    padding-right: $space-unit--xl + $space-unit--xxs;
+  }
+
+  &:hover {
+    color: $color__info;
+
+    a {
+      color: $color__info;
+    }
+
+    .arrow-down {
+      fill: $color__info;
+    }
+  }
+
+  a {
+    order: 1;
+
+    @include bp($mobile__menu-bp) {
+      order: unset;
+      width: unset;
+    }
+  }
+
+  .sub-menu {
+    order: 3;
+    width: 100%;
+
+    @include bp($mobile__menu-bp) {
+      order: unset;
+      width: 125px;
+      background: $color__light;
+      box-shadow: $box-shadow--2;
+      padding: $space-unit--xxs $space-unit--xs;
+      left: 43%;
+      transform: translateX(-50%);
+      position: absolute;
+      top: $base__space-unit;
+      z-index: 99999;
+    }
+
+    li {
+      border: none !important;
+      padding: 2rem 0 0 0;
+
+      @include bp($mobile__menu-bp) {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+        padding: $space-unit--xxs 0;
+      }
+
+      a {
+        @include bp($mobile__menu-bp) {
+          color: $color__dark;
+          margin-left: 0;
+
+          &:hover {
+            color: $color__info;
+          }
+
+          &:visited {
+            color: $color__dark;
+          }
+        }
+      }
+    }
+  }
+
+  .mobile-menu-btn {
+    order: 2;
+  }
+}
+
+// Active Menu Items --------------
+#mobile-menu .current-menu-item > a,
+#menu-social-mobile-menu .current-menu-item > a,
+#primary-menu .current-menu-item > a,
+#primary-menu .current-page-parent > a {
+  color: $color__success;
+}
+
+#primary-menu .current-menu-item:after,
+#primary-menu .current-page-parent:after {
+  position: absolute;
+  content: '';
+  height: 2px;
+  bottom: -6px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 13px;
+  background: $color__success;
+}

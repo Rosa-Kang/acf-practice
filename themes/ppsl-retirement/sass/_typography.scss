@@ -1,0 +1,476 @@
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+
+body,
+button,
+input,
+select,
+textarea {
+  color: $color__text-main;
+  font-family: $font__main;
+  @include font-size(1);
+  line-height: $font__line-height-body;
+}
+
+/* Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+}
+
+/* Copy */
+
+p {
+  margin-bottom: $base__space-unit;
+}
+
+dfn,
+cite,
+em,
+i {
+  font-style: italic;
+}
+
+blockquote {
+  margin: 0 $base__space-unit;
+}
+
+address {
+  margin: 0 0 $base__space-unit;
+}
+
+pre {
+  background: $color__background-pre;
+  font-family: $font__pre;
+  @include font-size(0.9375);
+  line-height: $font__line-height-pre;
+  margin-bottom: 1.6rem;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6rem;
+}
+
+code,
+kbd,
+tt,
+var {
+  font-family: $font__code;
+  @include font-size(0.9375);
+}
+
+abbr,
+acronym {
+  border-bottom: 1px dotted $color__border-abbr;
+  cursor: help;
+}
+
+mark,
+ins {
+  background: $color__background-ins;
+  text-decoration: none;
+}
+
+big {
+  font-size: 125%;
+}
+
+/** 
+ * Google Fonts Example
+ * font-family: 'Lobster', cursive;
+ * font-family: 'Lobster Two', cursive;
+ * font-family: 'Luckiest Guy', cursive;
+*/
+
+// Custom Fonts -----------------------------
+
+.header-2,
+h1,
+h2,
+h3 {
+  @include font($font__bold, normal, $font__weight-normal);
+}
+
+// hero, fullwidth hero
+h1 {
+  color: $color__light;
+  font-size: 33px;
+  line-height: 41px;
+
+  @include bp($mobile__bp) {
+    font-size: 50px;
+    line-height: 62px;
+  }
+}
+
+.text-shadow-none {
+  text-shadow: none;
+}
+
+.hero-slider h1 {
+  white-space: nowrap;
+}
+
+.header-fullwidth {
+  font-family: $font__accent;
+  color: $color__info;
+  font-size: 45px;
+  line-height: 45px;
+
+  @include bp($mobile__bp) {
+    font-size: 95px;
+    line-height: 85px;
+  }
+}
+
+// intro, callout, callout-video, more-info, cards-images
+h2,
+.content h2 {
+  color: $color__primary;
+  font-size: 33px;
+  line-height: 41px;
+  font-weight: $font__weight-normal;
+
+  @include bp($mobile__bp) {
+    font-size: 40px;
+    line-height: 49px;
+  }
+}
+
+.intro {
+  h2 {
+    @include bp($mobile__bp) {
+      font-size: 50px;
+      line-height: 62px;
+    }
+  }
+}
+
+h2.is-family-secondary {
+  font-size: 60px;
+  line-height: 1;
+  // TODO: alt font request
+  // font-size: 40px;
+  // font-weight: $font__weight-bold;
+
+  @include bp($mobile__bp) {
+    font-size: 70px;
+    line-height: 84px;
+    // TODO: alt font request
+    // font-size: 50px;
+    // line-height: 1.5;
+    // font-weight: $font__weight-bold;
+  }
+}
+
+// Intro subtitle
+.subtitle,
+.blog h3.subtitle {
+  color: $color__primary;
+  font-family: $font__main;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: $font__weight-semibold;
+  text-transform: uppercase;
+  margin-bottom: $space-unit--xxs !important;
+
+  @include bp($mobile__bp) {
+    font-size: 20px;
+    line-height: 27px;
+    margin-bottom: $space-unit--xs !important;
+  }
+}
+
+.intro,
+.contact-form,
+.additional-form,
+.blog article,
+.single-post article,
+.modal,
+.cards-suites {
+  .subtitle {
+    font-size: 20px;
+    line-height: 27px;
+  }
+}
+
+.cards-suites {
+  .subtitle {
+    margin-bottom: $space-unit--s !important;
+    line-height: 1;
+  }
+}
+
+.features .column p:first-child,
+.citation {
+  font-family: $font__accent;
+  font-size: 40px;
+  line-height: 48px;
+  color: $color__primary;
+  text-transform: capitalize;
+  // TODO: alt font request
+  // font-size: 28px;
+  // line-height: 1.75;
+  // font-weight: $font__weight-bold;
+}
+
+.features .column p:last-child {
+  line-height: 1;
+}
+
+// cards-3, contact form, cards-images (subheader), faq
+h3,
+.content h3,
+.numeric-pagination li a {
+  color: $color__primary;
+  font-size: 25px;
+  line-height: 34px;
+  font-weight: $font__weight-normal;
+  text-transform: lowercase;
+}
+
+h3.is-family-secondary {
+  font-size: 60px;
+  line-height: 1;
+  letter-spacing: 1.5px;
+  text-transform: capitalize;
+  white-space: break-spaces;
+  // TODO: alt font request
+  // font-size: 40px;
+  // line-height: 1.25;
+  // font-weight: $font__weight-bold;
+
+  @include bp($mobile__bp) {
+    font-size: 66px;
+    letter-spacing: 0;
+    // TODO: alt font request
+    // font-size: 50px;
+    // font-weight: $font__weight-bold;
+  }
+}
+
+.contact-form {
+  h3 {
+    text-transform: capitalize;
+  }
+}
+
+.page-template-page-faq,
+.page-template-page-careers {
+  .accordion-header h3 {
+    font-family: $font__main;
+    font-weight: $font__weight-semibold;
+    font-size: 17px;
+    line-height: 23px;
+    letter-spacing: 0.42px;
+    text-transform: capitalize;
+
+    @include bp($mobile__bp) {
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 0.45px;
+    }
+  }
+}
+
+.entry-meta {
+  color: $color__dark;
+  font-size: 18px;
+  line-height: 23px;
+
+  @include bp($mobile__bp) {
+    font-size: 26px;
+    line-height: 33px;
+  }
+}
+
+p,
+li {
+  @include font($font__main, normal, $font__weight-normal);
+}
+
+p,
+li {
+  color: $color__dark;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+li {
+  line-height: 2.5;
+}
+
+.contact-form {
+  li {
+    line-height: unset;
+  }
+}
+
+.testimonials {
+  p.is-family-secondary {
+    font-size: 55px;
+    line-height: 1;
+  }
+}
+
+// Single Post
+.single-post {
+  .wp-block-quote {
+    text-align: center;
+    margin-bottom: $base__space-unit;
+
+    p {
+      font-family: $font__bold;
+      font-size: 20px;
+      line-height: 1.5;
+      color: $color__primary;
+    }
+
+    cite {
+      color: $color__primary;
+      text-align: center;
+    }
+
+    cite::before {
+      content: '- ';
+    }
+  }
+
+  figure {
+    text-align: center;
+
+    figcaption {
+      color: $color__primary;
+      font-size: 15px;
+    }
+  }
+}
+
+// Background Variations
+.has-background-primary {
+  h2,
+  h3,
+  h4,
+  p,
+  li,
+  ol,
+  span {
+    color: $color__light;
+  }
+
+  a,
+  a:visited {
+    color: $color__light;
+
+    &:hover {
+      color: $color__info-invert;
+
+      svg,
+      .social-icon {
+        fill: $color__info-invert;
+      }
+    }
+
+    .social-icon {
+      width: 20px;
+      fill: $color__light;
+    }
+  }
+
+  span:hover {
+    color: $color__info-invert;
+  }
+}
+
+.has-background-light {
+  p {
+    color: $color__dark;
+  }
+}
+
+.accordions,
+.callout-img-left,
+.callout-img-center,
+.callout-img-right {
+  p > a {
+    text-decoration: underline;
+  }
+}
+
+// Navigation
+#mobile-menu li a {
+  color: $color__primary;
+  font-family: $font__main;
+  font-size: 23px;
+  line-height: 32px;
+  font-weight: $font__weight-semibold;
+  text-transform: uppercase;
+
+  &:hover {
+    color: $color__success;
+  }
+}
+
+#menu-social-mobile-menu li a {
+  color: $color__primary;
+  font-size: 19px;
+  line-height: 26px;
+
+  &:hover {
+    color: $color__success;
+  }
+}
+
+#primary-menu li a {
+  color: $color__primary;
+  font-family: $font__main;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: $font__weight-semibold;
+  text-transform: uppercase;
+
+  &:hover {
+    color: $color__success;
+  }
+}
+
+#menu-social-menu li a {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: initial;
+}
+
+.contact-menu a {
+  font-weight: $font__weight-semibold;
+}
+
+// Footer
+.footer-text {
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: $font__weight-semibold;
+  white-space: nowrap;
+
+  @include bp(tablet) {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+
+.privacy-terms-wrapper,
+.copyright-wrapper {
+  .footer-text {
+    font-size: 13px;
+    line-height: 18px;
+
+    @include bp(tablet) {
+      font-size: 12px;
+      line-height: 17px;
+    }
+  }
+}

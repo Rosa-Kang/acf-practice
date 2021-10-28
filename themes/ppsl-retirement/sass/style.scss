@@ -1,0 +1,82 @@
+/*!
+Theme Name: White Canvas Design Theme
+Theme URI: http://underscores.me/
+Author: White Canvas Design
+Author URI: http://www.whitecanvasdesign.ca
+Description: A custom theme for Park Place Seniors Living - Retirement Residence.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+White Canvas Design Theme is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Embedded Fonts
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Asides
+	## Comments
+# Media
+	## Captions
+	## Galleries
+# Page Templates
+	## Front page
+--------------------------------------------------------------*/
+
+@import '../node_modules/bulma/sass/utilities/initial-variables';
+@import '../node_modules/bulma/sass/utilities/functions';
+
+// Imported but not included in the stylesheet.
+@import 'variables';
+@import 'mixins';
+@import 'bulma-custom';
+@import '../node_modules/bulma/bulma.sass';
+
+// CSS included in style.css.
+@import 'layout';
+@import 'normalize';
+@import 'fonts';
+@import 'typography';
+@import 'elements';
+@import 'forms';
+@import 'navigation';
+@import 'modules';
+@import 'widgets';
+@import 'content';
+@import 'media';
+@import 'page-templates';
+
+// Components
+@import 'header';
+@import 'footer';
+@import 'buttons';
+@import 'prt-hero';
+@import 'prt-intro-more-info';
+@import 'prt-cards';
+@import 'prt-slider';
+@import 'prt-callout';
+@import 'prt-faqs';
+
+// Page Templates

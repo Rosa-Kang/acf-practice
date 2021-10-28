@@ -1,0 +1,56 @@
+/*--------------------------------------------------------------
+# Bulma Custom
+--------------------------------------------------------------*/
+
+// Size
+$tablet: 768px;
+
+// Colours - Main
+$light: $color__light;
+$dark: $color__dark;
+$primary: $color__primary;
+$primary-invert: $color__primary-invert;
+// $primary-light: $color__primary-light;
+$primary-dark: $color__primary-dark;
+
+// Colours - Secondary
+$success: $color__success;
+// $success-invert: $color__success-invert;
+// $success-light: $color__success-light;
+$success-dark: $color__success-dark;
+
+// Colours - Accent 1
+$info: $color__info;
+$info-invert: $color__info-invert;
+$info-light: $color__info-light;
+$info-dark: $color__info-dark;
+
+// Colours - Accent 2
+$warning: $color__warning;
+$warning-invert: $color__warning-invert;
+$warning-light: $color__warning-light;
+// $warning-dark: $color__warning-dark;
+
+// Fonts
+$text: $color__text-main;
+$family-primary: $font__main;
+$family-secondary: $font__accent;
+$family-sans-serif: $font__bold;
+$weight-light: $font__weight-light;
+$weight-normal: $font__weight-normal;
+$weight-medium: $font__weight-medium;
+$weight-semibold: $font__weight-semibold;
+$weight-bold: $font__weight-bold;
+
+// $box-shadow: none;
+
+// Modal
+$modal-z: 9999;
+$modal-background-background-color: $color__overlay;
+
+// Card
+$card-radius: 0;
+
+.content ul {
+  margin-left: 1.2em !important;
+}

@@ -1,0 +1,36 @@
+/*--------------------------------------------------------------
+# Intro / More Info / More Info Features
+--------------------------------------------------------------*/
+
+.background-wrapper {
+  .intro {
+    padding-bottom: 0 !important;
+  }
+
+  .intro > .content-wrapper {
+    @include bp(tablet) {
+      padding-bottom: $base__space-unit;
+    }
+  }
+}
+
+.page-template-page-lifestyle-2,
+.page-template-page-services {
+  .intro {
+    padding-bottom: $space-unit--xxxl + $space-unit--xl !important;
+
+    @include bp($mobile__menu-bp) {
+      padding-bottom: $space-unit--s * 8 !important;
+    }
+  }
+}
+
+.page-template-page-suites {
+  .intro {
+    padding-bottom: $space-unit--xxxl !important;
+
+    @include bp($mobile__menu-bp) {
+      padding-bottom: $space-unit--s * 8 !important;
+    }
+  }
+}

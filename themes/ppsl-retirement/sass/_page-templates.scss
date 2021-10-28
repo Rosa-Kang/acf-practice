@@ -1,0 +1,215 @@
+/*--------------------------------------------------------------
+# Page Templates
+--------------------------------------------------------------*/
+
+// Social Icons Wrapper ----------------------
+.social-icons-wrapper {
+  @include flex(row, flex-start, center);
+
+  a {
+    @include row-cen();
+  }
+}
+
+.main-navigation {
+  .social-icons-wrapper {
+    margin-left: $base__space-unit;
+    margin-top: $space-unit--s;
+    position: relative;
+
+    @include bp($mobile__menu-bp) {
+      margin: unset;
+      margin-left: 2rem;
+    }
+
+    a {
+      margin-right: $space-unit--xxs;
+
+      &:hover {
+        .social-icon {
+          fill: $color__primary;
+
+          @include bp($mobile__menu-bp) {
+            fill: $color__info-invert;
+          }
+        }
+      }
+    }
+
+    a:last-of-type {
+      margin-right: 0;
+    }
+
+    svg {
+      width: 20px;
+    }
+
+    .social-icon {
+      fill: $color__primary;
+
+      @include bp($mobile__menu-bp) {
+        fill: $color__light;
+      }
+    }
+  }
+}
+
+// Blog/News Posts --------------------------
+.single-post {
+  article {
+    margin: 0 auto;
+
+    @include bp($mobile__menu-bp) {
+      padding-bottom: $space-unit--s * 5;
+    }
+  }
+
+  .wp-block-image,
+  .wp-block-image .aligncenter,
+  .wp-block-image .alignleft,
+  .wp-block-image .alignright,
+  .wp-block-image.is-resized {
+    @include col-cen();
+  }
+
+  figure {
+    padding: $space-unit--lg 0;
+    margin: 0 auto;
+  }
+}
+
+// 404 Page ----------------------
+.error-404 {
+  min-height: 66vh;
+  height: 100%;
+  @include col-cen();
+
+  .page-content {
+    div:first-of-type > a {
+      margin: 0 auto;
+      padding-bottom: 0;
+    }
+  }
+}
+
+// Privacy Policy -----------------------------
+.privacy-policy {
+  .entry-content {
+    h2,
+    h3,
+    h4 {
+      text-align: left;
+    }
+  }
+}
+
+// Contact Map -------------------
+.contact-map-wrapper {
+  line-height: 0;
+  border: 4px solid $color__light-bis;
+  overflow: hidden;
+  position: relative;
+  height: 0;
+  padding-bottom: 100%;
+  margin-top: $space-unit--lg;
+  margin-bottom: $space-unit--xs;
+
+  @include bp(tablet) {
+    margin-top: 0;
+  }
+
+  @include bp(desktop-1024) {
+    padding-bottom: 60%;
+  }
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// Updates Page --------------------------
+.page-template-page-updates {
+  .column:last-child {
+    p {
+      margin-bottom: 0;
+    }
+
+    p:nth-of-type(3) {
+      margin-bottom: $base__space-unit;
+    }
+  }
+}
+
+// Section - Features --------------------
+.features {
+  padding-bottom: $space-unit--lg;
+
+  .columns {
+    width: 100%;
+    margin: 0 auto;
+
+    @include bp(tablet) {
+      justify-content: space-between;
+    }
+  }
+
+  .column {
+    @include bp(tablet) {
+      width: 32.25% !important;
+      margin-bottom: $space-unit--xs !important;
+    }
+
+    @include bp($mobile__bp) {
+      width: 32.5% !important;
+    }
+  }
+
+  .feature-wrapper {
+    flex-direction: row;
+    padding: $space-unit--xxs;
+    margin-bottom: $space-unit--xs;
+
+    @include bp(tablet) {
+      flex-direction: column;
+      padding: $space-unit--s $space-unit--xxs;
+      height: 100%;
+      margin-bottom: 0;
+    }
+  }
+
+  figure {
+    margin: 0;
+    margin-right: $base__space-unit;
+
+    @include bp(tablet) {
+      margin: 0;
+    }
+
+    @include bp($mobile__bp) {
+      width: 54px;
+    }
+
+    img {
+      height: 28px;
+      width: auto;
+
+      @include bp(tablet) {
+        height: 33px;
+      }
+    }
+  }
+}
+
+.home {
+  .features {
+    padding-bottom: $space-unit--xxxl + $space-unit--xl;
+
+    @include bp($mobile__menu-bp) {
+      padding-bottom: $space-unit--s * 8;
+    }
+  }
+}

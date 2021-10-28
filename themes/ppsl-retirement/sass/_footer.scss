@@ -1,0 +1,53 @@
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+.site-footer {
+  width: 100%;
+  z-index: 99999;
+
+  @include bp($mobile__menu-bp) {
+    background: url('../../assets/backgrounds/park-place-seniors-living-bg-xl-leaf-light.svg');
+    background-repeat: no-repeat;
+    background-size: 280px;
+    background-position: left $base__space-unit bottom $base__space-unit;
+  }
+
+  p,
+  a {
+    margin: 0;
+  }
+
+  a,
+  p > a {
+    text-decoration: none;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+
+    li > a {
+      white-space: nowrap;
+    }
+  }
+}
+
+.site-footer > .content-wrapper {
+  @include bp(tablet) {
+    padding: $base__space-unit;
+  }
+}
+
+.footer-wrapper {
+  @include flex(column, center, center);
+}
+
+.copyright-wrapper {
+  text-align: center;
+
+  @include bp($mobile__menu-bp) {
+    width: 100%;
+    padding-top: 0;
+  }
+}

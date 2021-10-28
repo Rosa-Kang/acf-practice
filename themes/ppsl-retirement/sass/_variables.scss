@@ -1,0 +1,150 @@
+// Structure & Mobile Menu -----------------------
+$container-width: 1170px;
+$container-width--sm: 768px;
+$container-width--m: 900px;
+$mobile__menu-width: 308px;
+$mobile__menu-height: 98px;
+$desktop__menu-height: 138px;
+$banner__menu-height: 40px;
+$mobile__menu-bp: desktop-1080;
+$mobile__bp: desktop-1216;
+
+// Utilities ----------------------------------------
+$base__space-unit: 1.5rem;
+$space-unit--xxxl: $base__space-unit * 4; // 6rem
+$space-unit--xxl: $base__space-unit * 3; // 4.5rem
+$space-unit--xl: $base__space-unit * 2; // 3rem
+$space-unit--lg: $base__space-unit * 1.67; // 2.5rem
+$space-unit--s: $base__space-unit * 0.67; // 1rem
+$space-unit--xs: $base__space-unit/2; // 0.75rem
+$space-unit--xxs: $base__space-unit/3; // 0.5rem
+
+// Custom Colors -----------------------------------
+$color__light: #fefaf1; // warm white
+$color__light-bis: #f7efde; // leaf tan
+$color__dark: #313133; // charcoal
+$color__primary: #004858; // dark teal
+$color__primary-tint: rgba(0, 72, 88, 0.85);
+$color__primary-invert: $color__light;
+// $color__primary-light:;
+$color__primary-dark: #173963; //
+/*** SECONDARY ***/
+$color__success: #248a56; // emerald
+// $color__success-invert:;
+// $color__success-light:;
+$color__success-dark: #1a5d33; // dark emerald
+/*** ACCENT ***/
+$color__info: #357b6f; /// crashing waves
+$color__info-invert: #a4d8cf; // clear water
+$color__info-light: #ecf6f4; // pale ocean
+$color__info-dark: #8dc6ad; // eucalyptus
+$color__warning: #cc6d4f; // terracotta sunrise
+$color__warning-invert: $color__info;
+$color__warning-light: #b97131; // autumn leaves
+// $color__warning-dark:;
+$color__overlay: rgba(49, 49, 51, 0.25);
+
+// Colors ----------------------------------------
+$color__background-body: $color__light;
+$color__text-main: $color__dark;
+
+$color__background-screen: #f1f1f1;
+$color__text-screen: #21759b;
+
+$color__background-hr: #ccc;
+$color__background-pre: #eee;
+$color__background-ins: #fff9c0;
+$color__border-abbr: #666;
+
+$color__link: $color__primary;
+$color__link-visited: $color__primary;
+$color__link-hover: $color__success;
+
+// Typography ------------------------------------
+$font__main: 'Open Sans', sans-serif;
+$font__accent: 'Holiday2', sans-serif;
+// TODO: alt font request
+// $font__accent: 'beloved-script', sans-serif;
+$font__bold: 'Lora', serif;
+$font__code: Monaco, Consolas, 'Andale Mono', 'DejaVu Sans Mono', monospace;
+$font__pre: 'Courier 10 Pitch', Courier, monospace;
+$font__line-height-body: 1.5;
+$font__line-height-pre: 1.6;
+$font__weight-light: 300;
+$font__weight-normal: 400;
+$font__weight-medium: 500;
+$font__weight-semibold: 600;
+$font__weight-bold: 700;
+$text__shadow: 0px 3px 1px rgba(65, 64, 66, 0.2);
+
+// UI Properties --------------------------------
+$dim: 0.66;
+$transition: all 0.3s ease-in-out;
+$box-shadow--1: 0px 2px 8px rgba(0, 0, 0, 0.16);
+$box-shadow--2: 0px 3px 6px rgba(0, 0, 0, 0.16);
+$box-shadow--3: 0px 3px 4px rgba(0, 0, 0, 0.1);
+$box-shadow--4: 0px 5px 6px rgba(0, 0, 0, 0.2);
+$box-shadow--btn: 0px 1px 2px rgba(0, 0, 0, 0.3);
+$box-shadow--card: 0px 5px 5px 1px rgba(0, 0, 0, 0.1);
+$border--light: 2px solid $color__light;
+$border--primary: 2px solid $color__primary;
+$border--success: 2px solid $color__success;
+$border--info: 2px solid $color__info;
+
+// Breakpoints -----------------------------------
+// mobile-320 (iPhone 5/SE)
+$small-screen-320: 320px;
+
+// mobile (iPhone 6/7/8/X)
+$small-screen: 375px;
+
+// mobile-414
+$small-screen-414: 414px;
+
+// mobile-667
+$small-screen-667: 667px;
+
+// mobile-736
+$small-screen-736: 736px;
+
+// tablet
+$medium-screen: 768px;
+
+// tablet-834 - iPad Pro 10" (portrait)
+$medium-screen-834: 834px;
+
+// desktop-1022
+$large-screen-1022: 1022px;
+
+// desktop-1024
+$large-screen-1024: 1024px;
+
+// desktop-1080
+$large-screen-1080: 1080px;
+
+// desktop-1216 BULMA widescreen
+$large-screen-1216: 1216px;
+
+// desktop-1280
+$large-screen-1280: 1280px;
+
+// desktop
+$large-screen: 1366px;
+
+// bulma-fullhd
+$bulma-screen-1408: 1408px;
+
+// desktop-1440 - 13" MacBook Pro (2x scaling)
+$large-screen-1440: 1440px;
+
+// desktop-1600
+$large-screen-1600: 1600px;
+
+// desktop-1865
+$large-screen-1865: 1865px;
+
+// desktop-1920
+$large-screen-1920: 1920px;
+
+// desktop-2560
+$large-screen-2560: 2560px;

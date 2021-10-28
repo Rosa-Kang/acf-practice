@@ -1,0 +1,63 @@
+/*--------------------------------------------------------------
+# Slider
+--------------------------------------------------------------*/
+
+/* SwiperJS - Custom */
+
+/* semantic HTML - remove bullet and space from the list */
+ul.swiper-wrapper {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+// Navigation
+.swiper-button-next,
+.swiper-button-prev {
+  width: 28px !important;
+  height: 28px !important;
+  margin-top: -14px !important;
+  background-size: 28px 28px !important;
+}
+
+// Gallery w/thumbnails ---------------------------
+.gallery-thumbnails > .content-wrapper {
+  padding: 0;
+}
+
+.gallery-thumbnails {
+  position: relative;
+  height: 76.215vw;
+  margin: 0;
+  padding: 0;
+
+  @include bp(tablet) {
+    height: 36vw;
+  }
+
+  .swiper-slide {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .gallery-top {
+    height: 75%;
+    width: 100%;
+  }
+
+  .gallery-thumbs {
+    height: 22%;
+    margin-top: 12px;
+    // padding: 10px 0;
+
+    @include bp(tablet) {
+      height: 25%;
+      padding: 10px 0;
+      margin-top: 0;
+    }
+  }
+
+  .gallery-thumbs .swiper-slide {
+    height: 100%;
+  }
+}
